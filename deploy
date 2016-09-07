@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/payara41/bin
+./asadmin deploy ~/IdeaProjects/hello/target/hello-1.0-SNAPSHOT.war

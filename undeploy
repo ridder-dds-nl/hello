@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/payara41/bin
+./asadmin undeploy hello-1.0-SNAPSHOT

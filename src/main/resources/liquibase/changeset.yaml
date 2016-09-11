@@ -1,0 +1,33 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: create-subscriptions-table
+      author: r.ridder
+      changes:
+        - createTable:
+            tableName: subscription
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: container_number
+                  type: varchar(11)
+              - column:
+                  name: full_empty
+                  type: char(1)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: load_discharge
+                  type: char(1)
+              - column:
+                  name: end_date
+                  type: date
+              - column:
+                  name: customer
+                  type: varchar(20)

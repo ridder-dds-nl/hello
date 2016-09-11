@@ -7,28 +7,44 @@ import java.util.Date;
  * Created by ralph on 7-9-16.
  */
 @Entity
-@Table(name="subscription")
+@Table(name = "subscription")
 public class Subscription {
 
-    @Column(name="container_number")
+    @Id
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "container_number")
     private String containerNumber;
 
-    @Column(name="full_empty")
+    @Column(name = "full_empty")
     private String fullEmpty;
 
-    @Column(name="load_discharge")
+    @Column(name = "load_discharge")
     private String loadDischarge;
 
     @Temporal(TemporalType.DATE)
-    @Column(name="start_date")
+    @Column(name = "start_date")
     private Date startDate;
 
     @Temporal(TemporalType.DATE)
-    @Column(name="end_date")
+    @Column(name = "end_date")
     private Date endDate;
 
-    @Column(name="customer")
+    @Column(name = "customer")
     private String customer;
+
+    public Subscription() {
+        //required for JPA.
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getContainerNumber() {
         return containerNumber;

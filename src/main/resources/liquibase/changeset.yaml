@@ -26,6 +26,9 @@ databaseChangeLog:
                   name: load_discharge
                   type: char(1)
               - column:
+                  name: start_date
+                  type: date
+              - column:
                   name: end_date
                   type: date
               - column:

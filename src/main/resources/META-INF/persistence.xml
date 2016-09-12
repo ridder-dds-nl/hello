@@ -5,10 +5,10 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="hello">
-        <jta-data-source>jdbc/h2</jta-data-source>
+        <jta-data-source>jdbc/mysql</jta-data-source>
         <properties>
             <property name="eclipselink.target-database"
-                      value="HSQL"/>
+                      value="MySQL"/>
         </properties>
     </persistence-unit>
 </persistence>

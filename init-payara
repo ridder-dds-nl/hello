@@ -2,3 +2,7 @@
 cp /home/ralph/.m2/repository/com/h2database/h2/1.4.192/h2-1.4.192.jar ~/payara41/glassfish/domains/domain1/lib/ext
 ~/payara41/bin/asadmin create-jdbc-connection-pool --datasourceclassname org.h2.jdbcx.JdbcDataSource --restype javax.sql.DataSource --property url="jdbc\:h2\:mem\:" h2pool
 ~/payara41/bin/asadmin create-jdbc-resource --connectionpoolid h2pool jdbc/h2
+
+cp ~/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar ~/payara41/glassfish/domains/domain1/lib/ext
+~/payara41/bin/asadmin create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --restype javax.sql.DataSource --property url="jdbc\:mysql\://127.0.0.1\:3306/playground:user=root:password=root" mysqlpool
+~/payara41/bin/asadmin create-jdbc-resource --connectionpoolid mysqlpool jdbc/mysql
